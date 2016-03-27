@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo defaults write /Applications/${1}.app/Contents/Info NSAppleScriptEnabled -bool true
+sudo chmod 644 /Applications/${1}.app/Contents/Info.plist
+sudo codesign -f -s - /Applications/${1}.app
